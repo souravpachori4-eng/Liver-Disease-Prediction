@@ -1,5 +1,5 @@
 # Liver-Disease-Prediction
-A Machine Learning-based Diabetes Risk Prediction Tool that analyzes health parameters to predict Liver disease risk using Python and Scikit-learn.
+A Machine Learning-based Liver disease Risk Prediction Tool that analyzes health parameters to predict Liver disease risk using Python and Scikit-learn.
 Liver Disease Prediction System
 
 A Machine Learning-based Liver Disease Prediction Web Application built using Python, Flask, Pandas, NumPy and Scikit-learn.
