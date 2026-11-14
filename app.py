@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 app = Flask(__name__)
 app.secret_key = "change-this-local-secret"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(BASE_DIR, "/storage/emulated/0/liver/HepatoCare_Flask_Pydroid/Liver Patient Dataset more corrected_train.csv")
+DATASET_PATH = os.path.join(BASE_DIR, "Liver_prediction.csv")
 
 # These are the 9 input columns used by your original script:
 # df.iloc[:,  2:11] -> Age, TB, DB, Alkphos, SGPT, SGOT, TP, ALB, A/G Ratio
