@@ -110,6 +110,10 @@ def class_description(value):
         return "Non-liver-disease class predicted"
     return "Predicted class: " + str(value)
 
+# Load and train model when the app starts
+if os.path.exists(DATASET_PATH):
+    train_model(DATASET_PATH)
+
 
 PAGE = r"""
 <!DOCTYPE html>
@@ -237,9 +241,11 @@ def upload():
     return redirect(url_for("home"))
 
 
+
 if __name__ == "__main__":
-    if os.path.exists(DATASET_PATH):
-        train_model(DATASET_PATH)
-    print("\\nHepatoCare is starting...")
-    print("Open this address in your phone browser: http://127.0.0.1:5000")
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 10000)),
+        debug=False
+    )
+
